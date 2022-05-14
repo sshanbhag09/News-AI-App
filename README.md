@@ -1,7 +1,4 @@
-1.
-This is Alan Ai based news Reader App.One can search news by categories, term, source and get the top 10 news cards .Also I have included a feature to read the headline.
-
-2.
+1.THIS IA ALAN AI NEWS READER APP.One can search news by category, source, term and the project generates top 10 news cards and also I have included feature for ALAN Ai to read news headlines
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
