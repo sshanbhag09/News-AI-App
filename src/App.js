@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect, useState} from 'react'
+import alanBtn from '@alan-ai/alan-sdk-web'
+import NewsCards from './NewsCards/NewsCards';
+import "./App.css"
+import { mergeClasses } from '@material-ui/styles';
+const  alanKey="ea54b4f9a90d6c4d93505e56c9fe94662e956eca572e1d8b807a3e2338fdd0dc/stage"
 
 function App() {
+  const[newsArticles,setNewsArticles] =useState([]);
+  useEffect(()=>{
+
+    alanBtn({
+      key:alanKey,
+      onCommand:({command,articles})=>{
+        setNewsArticles(articles)
+      }
+    })
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="logoContainer">
+      <div className='img_container'>
+      <img  src="https://alan.app/static/mobile_meduza.918bc547.png" ></img>
+      </div>
+      <NewsCards articles={newsArticles}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
