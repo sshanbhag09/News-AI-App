@@ -3,7 +3,7 @@ import alanBtn from '@alan-ai/alan-sdk-web'
 import NewsCards from './NewsCards/NewsCards';
 import "./App.css"
 import { mergeClasses } from '@material-ui/styles';
-const  alanKey="ea54b4f9a90d6c4d93505e56c9fe94662e956eca572e1d8b807a3e2338fdd0dc/stage"
+const  alanKey="NEWS API"
 
 function App() {
   const[newsArticles,setNewsArticles] =useState([]);
